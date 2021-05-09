@@ -1,38 +1,28 @@
 import React, { useState, useEffect } from "react";
 import axios from "helpers/AxiosInstance";
 import FormState from "helpers/form/FormState";
+import { useHistory, useLocation } from "react-router-dom";
 import Swal from "sweetalert2";
-
 const useForm = () => {
-  const register = () => {
+  let history = useHistory();
+  let location = useLocation();
+
+  const updateUserPassword = () => {
     axios
-      .post("/register", {
-        nom: formState.inputValues.nom,
-        prenom: formState.inputValues.prenom,
-        email: formState.inputValues.email,
+      .post("/updateUserPassword", {
         password: formState.inputValues.password,
-        date_naissance: formState.inputValues.date_naissance,
-        num_tel: formState.inputValues.num_tel,
-        adresse: formState.inputValues.adresse,
       })
       .then((response) => {
-        Swal.fire("Client ajouté", "", "success");
-        resetFormState();
+        Swal.fire("mot de passe modifié", "", "success");
       })
       .catch((error) => {
         Swal.fire(error.data, "", "error");
       });
   };
   // formState is the data that we need
-  const inputValues = {
-    nom: "",
-    prenom: "",
-    email: "",
+  let inputValues = {
     password: "",
     password_confirm: "",
-    date_naissance: "",
-    num_tel: "",
-    adresse: "",
   };
 
   // serverMessage is the messages coming from the server api
@@ -48,7 +38,8 @@ const useForm = () => {
     inputErrorHandler,
     submitHandler,
     resetFormState,
-  } = FormState(inputValues, register);
+    updateFormState,
+  } = FormState(inputValues, updateUserPassword);
 
   return {
     formState,

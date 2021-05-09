@@ -13,24 +13,24 @@ const AddClient = () => {
   } = useForm();
   return (
     <>
-      <div class="content-wrapper">
+      <div className="content-wrapper">
         <HeaderBar title="Add Client" />
-        <div class="content">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="card">
-                  <div class="card-header border-0">
+        <div className="content">
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="card">
+                  <div className="card-header border-0">
                     <div className="container-fluid">
                       <div className="container">
-                        <div class="form-row">
-                          <div class="form-group col-md-6">
-                            <label for="inputEmail4">nom</label>
+                        <div className="form-row">
+                          <div className="form-group col-md-6">
+                            <label for="inputEmail4">Nom</label>
                             <Input
                               type="text"
                               id="nom"
                               name="nom"
-                              placeholder="Entrer an nom"
+                              placeholder="Nom ..."
                               inputHasErrors={formState.inputHasErrors.nom}
                               value={formState.inputValues.nom}
                               onChange={(e) => {
@@ -46,13 +46,13 @@ const AddClient = () => {
                               }}
                             />
                           </div>
-                          <div class="form-group col-md-6">
-                            <label for="inputEmail4">prenom</label>
+                          <div className="form-group col-md-6">
+                            <label for="inputEmail4">Prenom</label>
                             <Input
                               type="text"
                               id="prenom"
                               name="prenom"
-                              placeholder="Entrer an prenom"
+                              placeholder="Prénom ..."
                               inputHasErrors={formState.inputHasErrors.prenom}
                               value={formState.inputValues.prenom}
                               onChange={(e) => {
@@ -68,13 +68,13 @@ const AddClient = () => {
                               }}
                             />
                           </div>
-                          <div class="form-group col-md-6">
-                            <label for="inputEmail4">email</label>
+                          <div className="form-group col-md-6">
+                            <label for="inputEmail4">Email</label>
                             <Input
                               type="text"
                               id="email"
                               name="email"
-                              placeholder="Entrer an email"
+                              placeholder="Email ..."
                               inputHasErrors={formState.inputHasErrors.email}
                               value={formState.inputValues.email}
                               onChange={(e) => {
@@ -90,13 +90,13 @@ const AddClient = () => {
                               }}
                             />
                           </div>
-                          <div class="form-group col-md-6">
-                            <label for="inputEmail4">password</label>
+                          <div className="form-group col-md-6">
+                            <label for="inputEmail4">Password</label>
                             <Input
                               type="password"
                               id="password"
                               name="password"
-                              placeholder="Entrer an password"
+                              placeholder="Password ..."
                               inputHasErrors={formState.inputHasErrors.password}
                               value={formState.inputValues.password}
                               onChange={(e) => {
@@ -112,15 +112,15 @@ const AddClient = () => {
                               }}
                             />
                           </div>
-                          <div class="form-group col-md-6">
+                          <div className="form-group col-md-6">
                             <label for="inputEmail4">
-                              password confirmation
+                              Confirmation password
                             </label>
                             <Input
                               type="password"
                               id="password_confirm"
                               name="password_confirm"
-                              placeholder="Entrer an password confirmation"
+                              placeholder="Confirmation password ..."
                               inputHasErrors={
                                 formState.inputHasErrors.password_confirm
                               }
@@ -138,13 +138,13 @@ const AddClient = () => {
                               }}
                             />
                           </div>
-                          <div class="form-group col-md-6">
-                            <label for="inputEmail4">date_naissance</label>
+                          <div className="form-group col-md-6">
+                            <label for="inputEmail4">Date de naissance</label>
                             <Input
                               type="date"
                               id="date_naissance"
                               name="date_naissance"
-                              placeholder="Entrer an password date de naissance"
+                              placeholder="Date de naissance ..."
                               inputHasErrors={
                                 formState.inputHasErrors.date_naissance
                               }
@@ -162,13 +162,13 @@ const AddClient = () => {
                               }}
                             />
                           </div>
-                          <div class="form-group col-md-6">
-                            <label for="inputEmail4">num tel</label>
+                          <div className="form-group col-md-6">
+                            <label for="inputEmail4">Numéro de téléphone</label>
                             <Input
                               type="text"
                               id="num_tel"
                               name="num_tel"
-                              placeholder="Entrer an password num_tel de num_tel"
+                              placeholder="Numéro de téléphone ..."
                               inputHasErrors={formState.inputHasErrors.num_tel}
                               value={formState.inputValues.num_tel}
                               onChange={(e) => {
@@ -184,14 +184,14 @@ const AddClient = () => {
                               }}
                             />
                           </div>
-                          <div class="form-group col-md-6">
-                            <label for="inputEmail4">adresse</label>
+                          <div className="form-group col-md-6">
+                            <label for="inputEmail4">Adresse</label>
 
                             <Input
                               type="text"
                               id="adresse"
                               name="adresse"
-                              placeholder="Entrer an password adresse de adresse"
+                              placeholder="Adresse ..."
                               inputHasErrors={formState.inputHasErrors.adresse}
                               value={formState.inputValues.adresse}
                               onChange={(e) => {
@@ -211,14 +211,14 @@ const AddClient = () => {
                         <div className="row justify-content-end">
                           <button
                             type="button"
-                            class="btn btn-primary"
+                            className="btn btn-primary"
                             onClick={submitHandler}
                           >
                             Ajouter
                           </button>
                           <button
                             type="button"
-                            class="btn btn-light"
+                            className="btn btn-light"
                             onClick={resetFormState}
                           >
                             Initialiser

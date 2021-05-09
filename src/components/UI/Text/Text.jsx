@@ -2,8 +2,6 @@ import React from "react";
 import moment from "moment";
 
 const Text = ({ text, type }) => {
-  console.log("type : " + type);
-  console.log("text : " + text);
   if (text) {
     if (type === "date") {
       text = moment(text).format("DD/MM/YYYY");

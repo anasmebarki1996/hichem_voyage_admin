@@ -25,14 +25,14 @@ const ListReservation = () => {
 
   return (
     <>
-      <div class="content-wrapper">
+      <div className="content-wrapper">
         <HeaderBar title="Réservations" />
-        <div class="content">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="card">
-                  <div class="card-header border-0">
+        <div className="content">
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="card">
+                  <div className="card-header border-0">
                     <div className="container-fluid">
                       <div className="row justify-content-center">
                         <div className="col-12 col-md-2">
@@ -105,7 +105,7 @@ const ListReservation = () => {
                         <div className="col-12 col-md-2 button_center">
                           <button
                             type="button"
-                            class="btn btn-primary"
+                            className="btn btn-primary"
                             onClick={submitHandler}
                           >
                             Rechercher

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 
 import "./style.css";
-const Input = ({
+const Select = ({
   type,
   id,
   name,
@@ -13,6 +13,7 @@ const Input = ({
   onBlur,
   required,
   disabled,
+  data,
 }) => {
   const className = () => {
     return !inputHasErrors
@@ -30,33 +31,22 @@ const Input = ({
 
   return (
     <div className="input_container">
-      <input
-        type={newType}
+      <select
         id={id}
         name={name}
         class={className()}
-        placeholder={placeholder}
         value={value}
         onChange={onChange}
         onBlur={onBlur}
-        required={required}
-        disabled={disabled}
-      />
-      {type === "password" && (
-        <div className="input_field_icon">
-          {newType === "text" ? (
-            <AiOutlineEyeInvisible
-              size={18}
-              onClick={() => showPassword(false)}
-            />
-          ) : (
-            <AiOutlineEye size={18} onClick={() => showPassword(true)} />
-          )}
-        </div>
-      )}
+      >
+        {placeholder && <option disabled>{placeholder}</option>}
+        {data.map((item) => {
+          return <option value={item.id}>{item.value}</option>;
+        })}
+      </select>
       <div className="invalid-feedback">{inputHasErrors}</div>
     </div>
   );
 };
 
-export default Input;
+export default Select;

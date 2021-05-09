@@ -23,14 +23,14 @@ const useForm = () => {
       type: "date",
       order: true,
     },
-    { name: "email", title: "Email", type: "text", order: false },
+    { name: "email", title: "Email", type: "text", order: true },
     {
       name: "num_tel",
       title: "Numéro de téléphone",
       type: "text",
-      order: true,
+      order: false,
     },
-    { name: "adresse", title: "Adresse", type: "text", order: true },
+    { name: "adresse", title: "Adresse", type: "text", order: false },
   ];
 
   const onDelete = (user_id) => {

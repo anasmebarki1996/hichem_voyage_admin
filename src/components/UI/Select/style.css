@@ -1,0 +1,37 @@
+.input_container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.input_form_control {
+  width: 100%;
+  padding: 8px 20px;
+  text-align: left;
+  /* border: 0; */
+  outline: 0;
+  border-radius: 8px;
+  /* background-color: #f0f4fd;
+  color: #526489; */
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  font-size: 14px;
+  line-height: 1.428571;
+}
+
+.input_is_invalid {
+  background-image: none !important;
+}
+
+.input_field_icon {
+  float: right;
+  margin-right: 5%;
+  margin-top: -35px;
+  position: relative;
+  z-index: 2;
+}
+
+.button_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

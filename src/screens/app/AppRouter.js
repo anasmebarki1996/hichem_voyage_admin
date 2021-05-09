@@ -8,16 +8,17 @@ import {
   useLocation,
 } from "react-router-dom";
 import Home from "./Home/Home";
-import Voyage from "./Voyage/Voyage";
 import Header from "components/layouts/Header";
 import Sidebar from "components/layouts/Sidebar";
 
 import ListClient from "./Client/ListClient/ListClient";
 import AddClient from "./Client/AddClient/AddClient";
-import UpdateClient from "./Client/UpdateClient/UpdateClient";
+import UpdateClient from "./Client/UpdateClient";
 import ListVoyage from "./Voyage/ListVoyage/ListVoyage";
 import AddVoyage from "./Voyage/AddVoyage/AddVoyage";
 import ListReservation from "./Reservation/ListReservation/ListReservation";
+import UpdateVoyage from "./Voyage/UpdateVoyage/UpdateVoyage";
+import ReservationDetails from "./Reservation/ReservationDetails/ReservationDetails";
 
 const AppRouter = () => {
   return (
@@ -44,11 +45,14 @@ const AppRouter = () => {
             <AddVoyage />
           </Route>
           <Route path="/update-voyage">
-            <UpdateClient />
+            <UpdateVoyage />
           </Route>
           {/* ####################### */}
           <Route path="/reservations">
             <ListReservation />
+          </Route>
+          <Route path="/reservation-details">
+            <ReservationDetails />
           </Route>
 
           <Route path="/clients">
