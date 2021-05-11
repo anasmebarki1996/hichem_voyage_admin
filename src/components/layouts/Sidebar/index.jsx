@@ -121,7 +121,7 @@ const Index = () => {
               <Link
                 to="/reservations"
                 className={
-                  pathname === "/clients" ? "nav-link active" : "nav-link "
+                  pathname === "/reservations" ? "nav-link active" : "nav-link "
                 }
               >
                 <i className="nav-icon fas fa-ellipsis-h"></i>
@@ -131,9 +131,9 @@ const Index = () => {
             <li className="nav-header">Newsletter</li>
             <li className="nav-item">
               <Link
-                to="/"
+                to="/newsletter"
                 className={
-                  pathname === "/clients" ? "nav-link active" : "nav-link "
+                  pathname === "/newsletter" ? "nav-link active" : "nav-link "
                 }
               >
                 <i className="nav-icon fas fa-tachometer-alt"></i>

@@ -1,83 +1,99 @@
 import HeaderBar from "components/layouts/HeaderBar/HeaderBar";
+import Text from "components/UI/Text/Text";
 import React from "react";
 
+import useForm from "./useForm";
 const ReservationDetails = () => {
+  const { data } = useForm();
   return (
     <>
       <div className="content-wrapper">
         <HeaderBar title="Réservation détail" />
-        <section class="content">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-12">
-                <div class="invoice p-3 mb-3">
-                  <div class="row">
-                    <div class="col-12">
+        <section className="content">
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-12">
+                <div className="invoice p-3 mb-3">
+                  <div className="row">
+                    <div className="col-12">
                       <h4>
-                        <i class="fas fa-globe"></i> AdminLTE, Inc.
-                        <small class="float-right">Date: 2/10/2014</small>
+                        <i className="fas fa-globe"></i> Agence, Inc.
+                        <small className="float-right">
+                          Date:
+                          <Text text={data.date_reservation} type="date" />
+                        </small>
                       </h4>
                     </div>
                   </div>
-                  <div class="row invoice-info">
-                    <div class="col-sm-4 invoice-col">
+                  <div className="row invoice-info">
+                    <div className="col-sm-4 invoice-col">
                       From
                       <address>
-                        <strong>Admin, Inc.</strong>
+                        <strong>
+                          <Text text={data.lieu_depart} type="text" />
+                        </strong>
                         <br />
-                        795 Folsom Ave, Suite 600
+                        <Text text={data.agence_nom} type="text" />
                         <br />
-                        San Francisco, CA 94107
+                        <Text text={data.agence_adresse} type="text" />
                         <br />
-                        Phone: (804) 123-5432
+                        Date départ :{" "}
+                        <Text text={data.date_depart} type="date" />
                         <br />
-                        Email: info@almasaeedstudio.com
+                        Heure départ :{" "}
+                        <Text text={data.heure_depart} type="heure" />
                       </address>
                     </div>
-                    <div class="col-sm-4 invoice-col">
+                    <div className="col-sm-4 invoice-col">
                       To
                       <address>
-                        <strong>John Doe</strong>
+                        <strong>
+                          <Text text={data.lieu_arrive} type="text" />
+                        </strong>
                         <br />
-                        795 Folsom Ave, Suite 600
+                        <Text
+                          text={data.user_name + " " + data.user_prenom}
+                          type="text"
+                        />
                         <br />
-                        San Francisco, CA 94107
+                        Téléphone: <Text text={data.user_num_tel} type="text" />
                         <br />
-                        Phone: (555) 539-1037
-                        <br />
-                        Email: john.doe@example.com
+                        Email: <Text text={data.user_email} type="text" />
                       </address>
                     </div>
-                    <div class="col-sm-4 invoice-col">
-                      <b>Invoice #007612</b>
+                    <div className="col-sm-4 invoice-col">
+                      <b>Invoice</b>
                       <br />
                       <br />
-                      <b>Order ID:</b> 4F3S8J
+                      <b>Order ID:</b>{" "}
+                      <Text text={data.nombre_place} type="text" /> (places)
                       <br />
-                      <b>Payment Due:</b> 2/22/2014
+                      <b>Prix unitaire:</b>{" "}
+                      <Text text={data.prix} type="text" />
                       <br />
-                      <b>Account:</b> 968-34567
+                      <b>Prix total:</b>{" "}
+                      <Text text={data.prix * data.nombre_place} type="text" />
                     </div>
                   </div>
 
-                  <div class="row no-print">
-                    <div class="col-12">
+                  {/* <div className="row no-print">
+                    <div className="col-12">
                       <a
                         href="invoice-print.html"
                         rel="noopener"
                         target="_blank"
-                        class="btn btn-default"
+                        className="btn btn-default"
                       >
-                        <i class="fas fa-print"></i> Print
+                        <i className="fas fa-print"></i> Print
                       </a>
-                      <button type="button" class="btn btn-success float-right">
-                        <i class="far fa-credit-card"></i> Submit Payment
+                      <button type="button" className="btn btn-success float-right">
+                        <i className="far fa-credit-card"></i> Submit Payment
                       </button>
-                      <button type="button" class="btn btn-primary float-right">
-                        <i class="fas fa-download"></i> Generate PDF
+                      <button type="button" className="btn btn-primary float-right">
+                        <i className="fas fa-download"></i> Generate PDF
                       </button>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

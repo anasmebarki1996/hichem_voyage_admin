@@ -19,6 +19,7 @@ import AddVoyage from "./Voyage/AddVoyage/AddVoyage";
 import ListReservation from "./Reservation/ListReservation/ListReservation";
 import UpdateVoyage from "./Voyage/UpdateVoyage/UpdateVoyage";
 import ReservationDetails from "./Reservation/ReservationDetails/ReservationDetails";
+import Newsletter from "./Newsletter/Newsletter";
 
 const AppRouter = () => {
   return (
@@ -54,7 +55,10 @@ const AppRouter = () => {
           <Route path="/reservation-details">
             <ReservationDetails />
           </Route>
-
+          {/* ####################### */}
+          <Route path="/newsletter">
+            <Newsletter />
+          </Route>
           <Route path="/clients">
             <Redirect to="/" />
           </Route>

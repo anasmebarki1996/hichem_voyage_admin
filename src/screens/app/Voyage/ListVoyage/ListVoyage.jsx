@@ -40,7 +40,7 @@ const ListVoyage = () => {
                             type="text"
                             id="lieu_depart"
                             name="lieu_depart"
-                            placeholder="Entrer an lieu_depart"
+                            placeholder="Lieu de départ ..."
                             inputHasErrors={
                               formState.inputHasErrors.lieu_depart
                             }
@@ -63,7 +63,7 @@ const ListVoyage = () => {
                             type="text"
                             id="lieu_arrive"
                             name="lieu_arrive"
-                            placeholder="Entrer an lieu_arrive"
+                            placeholder="Lieu d'arrivée"
                             inputHasErrors={
                               formState.inputHasErrors.lieu_arrive
                             }
@@ -86,7 +86,7 @@ const ListVoyage = () => {
                             type="date"
                             id="dateDepart"
                             name="dateDepart"
-                            placeholder="Entrer an dateDepart"
+                            placeholder="Date de départ ..."
                             inputHasErrors={formState.inputHasErrors.dateDepart}
                             value={formState.inputValues.dateDepart}
                             onChange={(e) => {

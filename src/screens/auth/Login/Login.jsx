@@ -32,7 +32,7 @@ const Login = () => {
                   className="form-control"
                   id="email"
                   name="email"
-                  placeholder="Entrer an email"
+                  placeholder="Email ..."
                   inputHasErrors={formState.inputHasErrors.email}
                   value={formState.inputValues.email}
                   onChange={(e) => {
@@ -59,7 +59,7 @@ const Login = () => {
                   className="form-control"
                   id="password"
                   name="password"
-                  placeholder="Entrer your password"
+                  placeholder="Password ..."
                   inputHasErrors={formState.inputHasErrors.password}
                   value={formState.inputValues.password}
                   onChange={(e) => {
