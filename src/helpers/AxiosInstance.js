@@ -3,7 +3,7 @@ import Cookies from "universal-cookie";
 
 const cookies = new Cookies();
 const AxiosInstance = axios.create({
-  baseURL: "http://127.55.44.99:30001/API/admin/",
+  baseURL: "https://backend-hichem-voyage.herokuapp.com/API/admin/",
 });
 
 AxiosInstance.interceptors.request.use(

@@ -16,7 +16,7 @@ const AuthRouter = () => {
           <Login />
         </Route>
         <Route path="/">
-          <Redirect to="/login" />
+          <Login />
         </Route>
       </Switch>
     </Router>
