@@ -28,7 +28,7 @@ const UpdateVoyage = () => {
                       <div className="container">
                         <div className="form-row">
                           <div className="form-group col-md-6">
-                            <label for="inputEmail4">Lieu de départ</label>
+                            <label htmlFor="inputEmail4">Lieu de départ</label>
                             <Input
                               type="text"
                               id="lieu_depart"
@@ -52,7 +52,7 @@ const UpdateVoyage = () => {
                             />
                           </div>
                           <div className="form-group col-md-6">
-                            <label for="inputEmail4">Lieu d'arrivée</label>
+                            <label htmlFor="inputEmail4">Lieu d'arrivée</label>
                             <Input
                               type="text"
                               id="lieu_arrive"
@@ -76,7 +76,7 @@ const UpdateVoyage = () => {
                             />
                           </div>
                           <div className="form-group col-md-6">
-                            <label for="inputEmail4">Date de départ</label>
+                            <label htmlFor="inputEmail4">Date de départ</label>
                             <Input
                               type="date"
                               id="date_depart"
@@ -100,7 +100,7 @@ const UpdateVoyage = () => {
                             />
                           </div>
                           <div className="form-group col-md-6">
-                            <label for="inputEmail4">Heure de départ</label>
+                            <label htmlFor="inputEmail4">Heure de départ</label>
                             <Input
                               type="time"
                               id="heure_depart"
@@ -124,7 +124,7 @@ const UpdateVoyage = () => {
                             />
                           </div>
                           <div className="form-group col-md-6">
-                            <label for="inputEmail4">Durée</label>
+                            <label htmlFor="inputEmail4">Durée</label>
                             <Input
                               type="number"
                               id="duree"
@@ -146,7 +146,7 @@ const UpdateVoyage = () => {
                             />
                           </div>
                           <div className="form-group col-md-6">
-                            <label for="inputEmail4">Prix</label>
+                            <label htmlFor="inputEmail4">Prix</label>
                             <Input
                               type="number"
                               id="prix"
@@ -168,7 +168,9 @@ const UpdateVoyage = () => {
                             />
                           </div>
                           <div className="form-group col-md-6">
-                            <label for="inputEmail4">Maximum de place</label>
+                            <label htmlFor="inputEmail4">
+                              Maximum de place
+                            </label>
                             <Input
                               type="number"
                               id="max_place"
@@ -192,7 +194,9 @@ const UpdateVoyage = () => {
                             />
                           </div>
                           <div className="form-group col-md-6">
-                            <label for="inputEmail4">Moyen de transport</label>
+                            <label htmlFor="inputEmail4">
+                              Moyen de transport
+                            </label>
                             <Select
                               type="text"
                               id="moyen_transport"
@@ -217,7 +221,7 @@ const UpdateVoyage = () => {
                             />
                           </div>
                           <div className="form-group col-md-6">
-                            <label for="inputEmail4">Agence</label>
+                            <label htmlFor="inputEmail4">Agence</label>
                             <Select
                               type="text"
                               id="agence_id"

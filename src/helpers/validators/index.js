@@ -33,8 +33,6 @@ export const passwordValidator = (inputIdentifier, value) => {
 };
 
 export const passwordConfirmationValidator = (value1, value2) => {
-  console.log("value 1 : " + value1);
-  console.log("value 2 : " + value2);
   if (value1 !== value2) {
     return "password not identique";
   }
@@ -59,6 +57,14 @@ export const inputValidator = (inputIdentifier, value) => {
     case "prenom":
     case "numTel":
     case "adresse":
+    case "lieu_depart":
+    case "lieu_arrive":
+    case "date_depart":
+    case "duree":
+    case "prix":
+    case "max_place":
+    case "moyen_transport":
+    case "agence_id":
       return nameValidator(inputIdentifier, value);
     case "email":
       return emailValidator(inputIdentifier, value);

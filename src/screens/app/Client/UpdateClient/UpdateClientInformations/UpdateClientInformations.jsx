@@ -18,7 +18,7 @@ const UpdateClientInformations = () => {
             <div className="container">
               <div className="form-row">
                 <div className="form-group col-md-6">
-                  <label for="inputEmail4">Nom</label>
+                  <label htmlFor="inputEmail4">Nom</label>
                   <Input
                     type="text"
                     id="nom"
@@ -40,7 +40,7 @@ const UpdateClientInformations = () => {
                   />
                 </div>
                 <div className="form-group col-md-6">
-                  <label for="inputEmail4">Prenom</label>
+                  <label htmlFor="inputEmail4">Prenom</label>
                   <Input
                     type="text"
                     id="prenom"
@@ -62,7 +62,7 @@ const UpdateClientInformations = () => {
                   />
                 </div>
                 <div className="form-group col-md-6">
-                  <label for="inputEmail4">Email</label>
+                  <label htmlFor="inputEmail4">Email</label>
                   <Input
                     type="text"
                     id="email"
@@ -85,7 +85,7 @@ const UpdateClientInformations = () => {
                 </div>
 
                 <div className="form-group col-md-6">
-                  <label for="inputEmail4">Date de naissance</label>
+                  <label htmlFor="inputEmail4">Date de naissance</label>
                   <Input
                     type="date"
                     id="date_naissance"
@@ -107,7 +107,7 @@ const UpdateClientInformations = () => {
                   />
                 </div>
                 <div className="form-group col-md-6">
-                  <label for="inputEmail4">Numéro de téléphone</label>
+                  <label htmlFor="inputEmail4">Numéro de téléphone</label>
                   <Input
                     type="text"
                     id="num_tel"
@@ -129,7 +129,7 @@ const UpdateClientInformations = () => {
                   />
                 </div>
                 <div className="form-group col-md-6">
-                  <label for="inputEmail4">Adresse</label>
+                  <label htmlFor="inputEmail4">Adresse</label>
 
                   <Input
                     type="text"

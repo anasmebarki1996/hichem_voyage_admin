@@ -14,7 +14,7 @@ const AddClient = () => {
   return (
     <>
       <div className="content-wrapper">
-        <HeaderBar title="Add Client" />
+        <HeaderBar title="Ajouter Client" />
         <div className="content">
           <div className="container-fluid">
             <div className="row">
@@ -25,7 +25,7 @@ const AddClient = () => {
                       <div className="container">
                         <div className="form-row">
                           <div className="form-group col-md-6">
-                            <label for="inputEmail4">Nom</label>
+                            <label htmlFor="inputEmail4">Nom</label>
                             <Input
                               type="text"
                               id="nom"
@@ -47,7 +47,7 @@ const AddClient = () => {
                             />
                           </div>
                           <div className="form-group col-md-6">
-                            <label for="inputEmail4">Prenom</label>
+                            <label htmlFor="inputEmail4">Prenom</label>
                             <Input
                               type="text"
                               id="prenom"
@@ -69,7 +69,7 @@ const AddClient = () => {
                             />
                           </div>
                           <div className="form-group col-md-6">
-                            <label for="inputEmail4">Email</label>
+                            <label htmlFor="inputEmail4">Email</label>
                             <Input
                               type="text"
                               id="email"
@@ -91,7 +91,7 @@ const AddClient = () => {
                             />
                           </div>
                           <div className="form-group col-md-6">
-                            <label for="inputEmail4">Password</label>
+                            <label htmlFor="inputEmail4">Password</label>
                             <Input
                               type="password"
                               id="password"
@@ -113,7 +113,7 @@ const AddClient = () => {
                             />
                           </div>
                           <div className="form-group col-md-6">
-                            <label for="inputEmail4">
+                            <label htmlFor="inputEmail4">
                               Confirmation password
                             </label>
                             <Input
@@ -139,7 +139,9 @@ const AddClient = () => {
                             />
                           </div>
                           <div className="form-group col-md-6">
-                            <label for="inputEmail4">Date de naissance</label>
+                            <label htmlFor="inputEmail4">
+                              Date de naissance
+                            </label>
                             <Input
                               type="date"
                               id="date_naissance"
@@ -163,7 +165,9 @@ const AddClient = () => {
                             />
                           </div>
                           <div className="form-group col-md-6">
-                            <label for="inputEmail4">Numéro de téléphone</label>
+                            <label htmlFor="inputEmail4">
+                              Numéro de téléphone
+                            </label>
                             <Input
                               type="text"
                               id="num_tel"
@@ -185,7 +189,7 @@ const AddClient = () => {
                             />
                           </div>
                           <div className="form-group col-md-6">
-                            <label for="inputEmail4">Adresse</label>
+                            <label htmlFor="inputEmail4">Adresse</label>
 
                             <Input
                               type="text"

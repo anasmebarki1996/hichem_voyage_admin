@@ -6,11 +6,11 @@ const AxiosInstance = axios.create({
   baseURL: "http://127.55.44.99:30001/API/admin/",
 });
 
-axios.interceptors.request.use(
+AxiosInstance.interceptors.request.use(
   async (config) => {
     const token = await cookies.get("access_token");
     if (token) {
-      config.headers.Authorization = "bearer " + token;
+      config.headers.Authorization = token;
     }
     return config;
   },
@@ -27,7 +27,6 @@ AxiosInstance.interceptors.response.use(
   (error) => {
     if (error.response.status === 422) {
       return new Promise((resolve, reject) => {
-        // console.log(error);
         let data = { ...error.response.data };
         let errors = {};
         for (const key in data) {

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 import FormState from "helpers/form/FormState";
-import axios from "helpers/AxiosInstance";
+import AxiosInstance from "helpers/AxiosInstance";
 import Swal from "sweetalert2";
 import { calculatePages } from "helpers/pagination";
 const useForm = () => {
@@ -55,10 +55,9 @@ const useForm = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios
-          .post("/deleteVoyage", {
-            voyage_id: voyage_id,
-          })
+        AxiosInstance.post("/deleteVoyage", {
+          voyage_id: voyage_id,
+        })
           .then((response) => {
             getAllVoyages();
             Swal.fire("Deleted!", "Your file has been deleted.", "success");
@@ -90,15 +89,14 @@ const useForm = () => {
   }, [dataLength]);
 
   const getAllVoyages = () => {
-    axios
-      .post("/getAllVoyages", {
-        lieu_depart: formState.inputValues.lieu_depart,
-        lieu_arrive: formState.inputValues.lieu_arrive,
-        dateDepart: formState.inputValues.dateDepart,
-        order: order,
-        limit: 5,
-        page: currentPage,
-      })
+    AxiosInstance.post("/getAllVoyages", {
+      lieu_depart: formState.inputValues.lieu_depart,
+      lieu_arrive: formState.inputValues.lieu_arrive,
+      dateDepart: formState.inputValues.dateDepart,
+      order: order,
+      limit: 5,
+      page: currentPage,
+    })
       .then((response) => {
         setVoyages(response.data.data);
         setDataLength(response.data.dataLength);

@@ -12,6 +12,7 @@ function authReducer(state = initialState, action) {
       return {
         ...state,
         isLoggedIn: true,
+        name: action.name,
       };
     case REGISTER:
       return {
@@ -28,6 +29,7 @@ function authReducer(state = initialState, action) {
       return {
         ...state,
         isLoggedIn: action.isLoggedIn,
+        name: action.name,
       };
     }
     default:

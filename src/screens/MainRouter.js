@@ -9,7 +9,7 @@ const MainRouter = () => {
   const dispatch = useDispatch();
   dispatch(checkToken());
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
-  if (isLoggedIn) {
+  if (!isLoggedIn) {
     return <AuthRouter />;
   } else {
     return <AppRouter />;

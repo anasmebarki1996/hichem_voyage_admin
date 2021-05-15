@@ -42,7 +42,6 @@ const FormState = (form, submitFunction) => {
 
     if (visited) {
       hasError = inputValidator(inputIdentifier, value);
-      console.log("has error : " + hasError);
       if (inputIdentifier === "password_confirm" && !hasError) {
         hasError = passwordConfirmationValidator(
           value,

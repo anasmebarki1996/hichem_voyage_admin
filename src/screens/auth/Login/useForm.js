@@ -22,7 +22,11 @@ const useForm = () => {
         resetFormState();
         // token
         dispatch(
-          authActions.loginSuccess(response.access_token, response.expires_in)
+          authActions.loginSuccess(
+            response.access_token,
+            response.expires_in,
+            response.nom + " " + response.prenom
+          )
         );
         history.push("/");
       })

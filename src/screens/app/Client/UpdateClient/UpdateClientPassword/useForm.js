@@ -10,6 +10,7 @@ const useForm = () => {
   const updateUserPassword = () => {
     axios
       .post("/updateUserPassword", {
+        user_id: location.params.id,
         password: formState.inputValues.password,
       })
       .then((response) => {

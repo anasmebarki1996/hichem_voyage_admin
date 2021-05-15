@@ -26,7 +26,7 @@ const useForm = () => {
 
   const getAllnewsletters = () => {
     axios
-      .post("/getNewsletter", {
+      .post("/getAllnewsletters", {
         search: formState.inputValues.search,
         order: order,
         limit: 5,

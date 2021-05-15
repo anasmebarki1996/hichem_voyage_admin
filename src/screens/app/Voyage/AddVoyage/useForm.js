@@ -3,6 +3,8 @@ import axios from "helpers/AxiosInstance";
 import FormState from "helpers/form/FormState";
 import Swal from "sweetalert2";
 
+import wilayas from "constants/wilayas";
+
 const useForm = () => {
   const [agences, setAgences] = useState([]);
   const [moyen_transport_list, setMoyen_transport_list] = useState([
@@ -16,7 +18,6 @@ const useForm = () => {
     axios
       .post("/getAgencesList")
       .then((response) => {
-        console.log(response.data);
         setAgences(response.data.data);
       })
       .catch((error) => {
@@ -86,6 +87,7 @@ const useForm = () => {
     resetFormState,
     agences,
     moyen_transport_list,
+    wilayas,
   };
 };
 

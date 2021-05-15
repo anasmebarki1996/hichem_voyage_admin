@@ -18,7 +18,7 @@ const UpdateClientPassword = () => {
             <div className="container">
               <div className="form-row">
                 <div className="form-group col-md-6">
-                  <label for="inputEmail4">Password</label>
+                  <label htmlFor="inputEmail4">Password</label>
                   <Input
                     type="password"
                     id="password"
@@ -40,7 +40,7 @@ const UpdateClientPassword = () => {
                   />
                 </div>
                 <div className="form-group col-md-6">
-                  <label for="inputEmail4">Confirmation password</label>
+                  <label htmlFor="inputEmail4">Confirmation password</label>
                   <Input
                     type="password"
                     id="password_confirm"

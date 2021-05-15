@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 import FormState from "helpers/form/FormState";
-import axios from "helpers/AxiosInstance";
+import AxiosInstance from "helpers/AxiosInstance";
 import Swal from "sweetalert2";
 import { calculatePages } from "helpers/pagination";
 const useForm = () => {
@@ -44,10 +44,9 @@ const useForm = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios
-          .post("/deleteUser", {
-            user_id: user_id,
-          })
+        AxiosInstance.post("/deleteUser", {
+          user_id: user_id,
+        })
           .then((response) => {
             getAllUsers();
             Swal.fire("Deleted!", "Your file has been deleted.", "success");
@@ -79,13 +78,12 @@ const useForm = () => {
   }, [dataLength]);
 
   const getAllUsers = () => {
-    axios
-      .post("/getAllUsers", {
-        search: formState.inputValues.search,
-        order: order,
-        limit: 5,
-        page: currentPage,
-      })
+    AxiosInstance.post("/getAllUsers", {
+      search: formState.inputValues.search,
+      order: order,
+      limit: 5,
+      page: currentPage,
+    })
       .then((response) => {
         setClients(response.data.data);
         setDataLength(response.data.dataLength);

@@ -18,7 +18,7 @@ const useForm = () => {
   const getUser = () => {
     axios
       .post("/getUser", {
-        id: location.params.id,
+        user_id: location.params.id,
       })
       .then((response) => {
         let inputValues = {
@@ -35,10 +35,10 @@ const useForm = () => {
         history.push("/clients");
       });
   };
-  const updateUser = () => {
+  const updateUserInformations = () => {
     axios
-      .post("/updateUser", {
-        id: location.params.id,
+      .post("/updateUserInformations", {
+        user_id: location.params.id,
         nom: formState.inputValues.nom,
         prenom: formState.inputValues.prenom,
         email: formState.inputValues.email,
@@ -77,7 +77,7 @@ const useForm = () => {
     submitHandler,
     resetFormState,
     updateFormState,
-  } = FormState(inputValues, updateUser);
+  } = FormState(inputValues, updateUserInformations);
 
   return {
     formState,
