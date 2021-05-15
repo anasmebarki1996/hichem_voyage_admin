@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaExpand } from "react-icons/fa";
+import { AiOutlineMenu } from "react-icons/ai";
 
 import { IoLogOutOutline } from "react-icons/io5";
 import { logout } from "store/auth/authAction";
@@ -26,7 +27,7 @@ const Header = () => {
       <ul className="navbar-nav">
         <li className="nav-item">
           <a className="nav-link" data-widget="pushmenu" href="#" role="button">
-            <i className="fas fa-bars"></i>
+            <AiOutlineMenu />
           </a>
         </li>
         <li className="nav-item d-none d-sm-inline-block">
