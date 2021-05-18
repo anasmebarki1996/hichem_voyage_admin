@@ -42,100 +42,123 @@ const wilaya = [
     id: "bechar",
     value: "béchar",
   },
-  // {
-  //   code: "9",
-  //   value: "blida",
-  // },
-  // {
-  //   code: "10",
-  //   value: "bouira",
-  // },
-  // {
-  //   code: "11",
-  //   value: "tamanrasset",
-  // },
-  // {
-  //   code: "12",
-  //   value: "tbessa",
-  // },
-  // {
-  //   code: "13",
-  //   value: "tlemcen",
-  // },
-  // {
-  //   code: "14",
-  //   value: "tiaret",
-  // },
-  // {
-  //   code: "15",
-  //   value: "tizi ouzou",
-  // },
-  // {
-  //   code: "16",
-  //   value: "alger",
-  // },
-  // {
-  //   code: "17",
-  //   value: "djelfa",
-  // },
-  // {
-  //   code: "18",
-  //   value: "jijel",
-  // },
-  // {
-  //   code: "19",
-  //   value: "se9tif",
-  // },
-  // {
-  //   code: "20",
-  //   value: "saefda",
-  // },
-  // {
-  //   code: "21",
-  //   value: "skikda",
-  // },
-  // {
-  //   code: "22",
-  //   value: "sidi bel abbes",
-  // },
-  // {
-  //   code: "23",
-  //   value: "annaba",
-  // },
-  // {
-  //   code: "24",
-  //   value: "guelma",
-  // },
-  // {
-  //   code: "25",
-  //   value: "constantine",
-  // },
-  // {
-  //   code: "26",
-  //   value: "medea",
-  // },
-  // {
-  //   code: "27",
-  //   value: "mostaganem",
-  // },
-  // {
-  //   code: "28",
-  //   value: "m'sila",
-  // },
-  // {
-  //   code: "29",
-  //   value: "mascara",
-  // },
-  // {
-  //   code: "30",
-  //   value: "ouargla",
-  //   ar_value: "ورقلة",
-  // },
-  // {
-  //   code: "31",
-  //   value: "oran",
-  //   ar_value: "وهران",
-  // },
+  {
+    code: "9",
+    id: "blida",
+    value: "blida",
+  },
+  {
+    code: "10",
+    id: "bouira",
+    value: "bouira",
+  },
+  {
+    code: "11",
+    id: "tamanrasset",
+    value: "tamanrasset",
+  },
+  {
+    code: "12",
+    value: "tbessa",
+    value: "tbessa",
+  },
+  {
+    code: "13",
+    id: "tlemcen",
+    value: "tlemcen",
+  },
+  {
+    code: "14",
+    id: "tiaret",
+    value: "tiaret",
+  },
+  {
+    code: "15",
+    id: "tizi ouzou",
+    value: "tizi ouzou",
+  },
+  {
+    code: "16",
+    id: "alger",
+    value: "alger",
+  },
+  {
+    code: "17",
+    id: "djelfa",
+    value: "djelfa",
+  },
+  {
+    code: "18",
+    value: "jijel",
+    value: "jijel",
+  },
+  {
+    code: "19",
+    id: "setif",
+    value: "setif",
+  },
+  {
+    code: "20",
+    id: "saeda",
+    value: "saeda",
+  },
+  {
+    code: "21",
+    id: "skikda",
+    value: "skikda",
+  },
+  {
+    code: "22",
+    id: "sidi bel abbes",
+    value: "sidi bel abbes",
+  },
+  {
+    code: "23",
+    id: "annaba",
+    value: "annaba",
+  },
+  {
+    code: "24",
+    value: "guelma",
+    value: "guelma",
+  },
+  {
+    code: "25",
+    id: "constantine",
+    value: "constantine",
+  },
+  {
+    code: "26",
+    id: "medea",
+    value: "medea",
+  },
+  {
+    code: "27",
+    id: "mostaganem",
+    value: "mostaganem",
+  },
+  {
+    code: "28",
+    id: "m'sila",
+    value: "m'sila",
+  },
+  {
+    code: "29",
+    id: "mascara",
+    value: "mascara",
+  },
+  {
+    code: "30",
+    id: "ouargla",
+    value: "ouargla",
+    ar_value: "ورقلة",
+  },
+  {
+    code: "31",
+    id: "oran",
+    value: "oran",
+    ar_value: "وهران",
+  },
   // {
   //   code: "32",
   //   value: "el bayadh",
