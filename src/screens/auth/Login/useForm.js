@@ -42,7 +42,7 @@ const useForm = () => {
   // formState is the data that we need
   const inputValues = {
     email: "hichem.mebarki@outlook.fr",
-    password: "123123",
+    password: "123456",
   };
 
   // serverMessage is the messages coming from the server api
