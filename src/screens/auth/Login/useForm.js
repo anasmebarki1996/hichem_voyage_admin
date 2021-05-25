@@ -41,7 +41,7 @@ const useForm = () => {
 
   // formState is the data that we need
   const inputValues = {
-    email: "hichamme@outlook.com",
+    email: "hichem.mebarki@outlook.fr",
     password: "123123",
   };
 

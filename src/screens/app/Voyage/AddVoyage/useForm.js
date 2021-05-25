@@ -14,20 +14,20 @@ const useForm = () => {
     { id: "bus", value: "Bus" },
   ]);
 
-  const getAgencesList = () => {
-    axios
-      .post("/getAgencesList")
-      .then((response) => {
-        setAgences(response.data.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+  // const getAgencesList = () => {
+  //   axios
+  //     .post("/getAgencesList")
+  //     .then((response) => {
+  //       setAgences(response.data.data);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
 
-  useEffect(() => {
-    getAgencesList();
-  }, []);
+  // useEffect(() => {
+  //   getAgencesList();
+  // }, []);
 
   const createVoyage = () => {
     axios
@@ -40,7 +40,7 @@ const useForm = () => {
         prix: formState.inputValues.prix,
         max_place: formState.inputValues.max_place,
         moyen_transport: formState.inputValues.moyen_transport,
-        agence_id: formState.inputValues.agence_id,
+        // agence_id: formState.inputValues.agence_id,
       })
       .then((response) => {
         Swal.fire("Voyage ajouté", "", "success");
@@ -60,7 +60,7 @@ const useForm = () => {
     prix: "",
     max_place: "",
     moyen_transport: "",
-    agence_id: "",
+    // agence_id: "",
   };
 
   // serverMessage is the messages coming from the server api

@@ -23,20 +23,21 @@ const useForm = () => {
     { id: "bus", value: "Bus" },
   ]);
 
-  const getAgencesList = () => {
-    axios
-      .post("/getAgencesList")
-      .then((response) => {
-        setAgences(response.data.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+  // const getAgencesList = () => {
+  //   axios
+  //     .post("/getAgencesList")
+  //     .then((response) => {
+  //       setAgences(response.data.data);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
 
-  useEffect(() => {
-    getAgencesList();
-  }, []);
+  // useEffect(() => {
+  //   getAgencesList();
+  // }, []);
+
   const getVoyage = () => {
     axios
       .post("/getVoyage", {
@@ -52,7 +53,7 @@ const useForm = () => {
           prix: response.data.data.prix,
           max_place: response.data.data.max_place,
           moyen_transport: response.data.data.moyen_transport,
-          agence_id: response.data.data.agence_id,
+          // agence_id: response.data.data.agence_id,
         };
         updateFormState(inputValues);
       })
@@ -73,7 +74,7 @@ const useForm = () => {
         prix: formState.inputValues.prix,
         max_place: formState.inputValues.max_place,
         moyen_transport: formState.inputValues.moyen_transport,
-        agence_id: formState.inputValues.agence_id,
+        // agence_id: formState.inputValues.agence_id,
       })
       .then((response) => {
         Swal.fire("Voyage modifié", "", "success");
@@ -92,7 +93,7 @@ const useForm = () => {
     prix: "",
     max_place: "",
     moyen_transport: "",
-    agence_id: "",
+    // agence_id: "",
   };
 
   // serverMessage is the messages coming from the server api

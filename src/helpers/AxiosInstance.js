@@ -3,8 +3,10 @@ import Cookies from "universal-cookie";
 
 const cookies = new Cookies();
 const AxiosInstance = axios.create({
-  baseURL: "https://backend-hichem-voyage.herokuapp.com/API/admin/",
+  baseURL: "http://127.55.44.99:3000/API/admin/",
 });
+// baseURL: "https://backend-hichem-voyage.herokuapp.com/API/admin/",
+// baseURL: "127.55.44.99:3000/API/admin/",
 
 AxiosInstance.interceptors.request.use(
   async (config) => {
@@ -38,7 +40,8 @@ AxiosInstance.interceptors.response.use(
         reject({ status: error.response.status, data: errors });
       });
     } else if (error.response.status === 401) {
-      localStorage.removeItem("access_token");
+      cookies.remove("access_token", { path: "/" });
+      cookies.remove("name_admin", { path: "/" });
       return new Promise((resolve, reject) => {
         reject({
           status: error.response.status,

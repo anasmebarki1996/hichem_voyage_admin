@@ -15,7 +15,7 @@ const Index = ({ name }) => {
       style={{ height: "100vh" }}
     >
       <Link to="/" className="brand-link" style={{ textAlign: "center" }}>
-        <span className="brand-text font-weight-light">AdminLTE 3</span>
+        <span className="brand-text font-weight-light">ALGERIE-VOYAGE</span>
       </Link>
 
       <div className="sidebar">

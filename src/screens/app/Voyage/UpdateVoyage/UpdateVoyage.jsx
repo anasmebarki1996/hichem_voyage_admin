@@ -220,7 +220,7 @@ const UpdateVoyage = () => {
                               data={moyen_transport_list}
                             />
                           </div>
-                          <div className="form-group col-md-6">
+                          {/* <div className="form-group col-md-6">
                             <label htmlFor="inputEmail4">Agence</label>
                             <Select
                               type="text"
@@ -245,6 +245,7 @@ const UpdateVoyage = () => {
                               data={agences}
                             />
                           </div>
+                     */}
                         </div>
                         <div className="row justify-content-end">
                           <button
