@@ -30,12 +30,7 @@ const MoyentTransportMostUsed = ({ data }) => {
       <div className="card-header border-0">
         <h3 className="card-title">Moyen de transport</h3>
       </div>
-      <div
-        style={{
-          width: "400px",
-          margin: "auto",
-        }}
-      >
+      <div className="doughnut-container">
         <Doughnut data={dataBar} />
       </div>
     </div>

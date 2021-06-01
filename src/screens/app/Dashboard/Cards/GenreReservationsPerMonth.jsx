@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import { Bar } from "react-chartjs-2";
 
-const ReservationByMonths = ({ data }) => {
+const GenreReservationsPerMonth = ({ data }) => {
+  const { nombre_femme, nombre_homme } = data;
+
   const dataBar = {
     labels: [
       "Janvier",
@@ -19,10 +21,16 @@ const ReservationByMonths = ({ data }) => {
     ],
     datasets: [
       {
-        label: "# reservation",
-        data: data,
+        label: "# Femme",
+        data: nombre_femme,
         borderWidth: 1,
-        backgroundColor: "rgb(75, 192, 192)",
+        backgroundColor: "rgb(255, 99, 132)",
+      },
+      {
+        label: "# Homme",
+        data: nombre_homme,
+        borderWidth: 1,
+        backgroundColor: "rgb(54, 162, 235)",
       },
     ],
   };
@@ -42,7 +50,7 @@ const ReservationByMonths = ({ data }) => {
   return (
     <div className="card col-md-12">
       <div className="card-header border-0">
-        <h3 className="card-title">Nombre de reservation par mois</h3>
+        <h3 className="card-title">Nombre de reservation par mois (genre)</h3>
       </div>
       <div className="bar-container">
         <Bar data={dataBar} options={options} />
@@ -51,4 +59,4 @@ const ReservationByMonths = ({ data }) => {
   );
 };
 
-export default ReservationByMonths;
+export default GenreReservationsPerMonth;
